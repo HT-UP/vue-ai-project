@@ -279,6 +279,19 @@ onBeforeUnmount(() => {
     </el-col>
     <el-col :xs="24" :md="12">
       <el-card class="chart-card" shadow="never">
+        <div ref="radarRef" class="chart-box"></div>
+      </el-card>
+    </el-col>
+  </el-row>
+
+  <el-row :gutter="16" class="chart-row">
+    <el-col :xs="24" :md="12">
+      <el-card class="chart-card" shadow="never">
+        <div ref="achievementRef" class="chart-box"></div>
+      </el-card>
+    </el-col>
+    <el-col :xs="24" :md="12">
+      <el-card class="chart-card" shadow="never">
         <div class="info-box">
           <h4>科研指标分析</h4>
           <div class="metric-item">
@@ -298,19 +311,6 @@ onBeforeUnmount(() => {
             <el-progress type="line" :percentage="95" :color="'#8b5cf6'" />
           </div>
         </div>
-      </el-card>
-    </el-col>
-  </el-row>
-
-  <el-row :gutter="16" class="chart-row">
-    <el-col :xs="24" :md="12">
-      <el-card class="chart-card" shadow="never">
-        <div ref="achievementRef" class="chart-box"></div>
-      </el-card>
-    </el-col>
-    <el-col :xs="24" :md="12">
-      <el-card class="chart-card" shadow="never">
-        <div ref="radarRef" class="chart-box"></div>
       </el-card>
     </el-col>
   </el-row>
@@ -364,22 +364,23 @@ onBeforeUnmount(() => {
 
 .chart-box {
   width: 100%;
-  height: 380px;
+  height: 340px;
   overflow: hidden;
 }
 
 .info-box {
-  height: 380px;
+  height: 340px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   h4 {
-    margin: 0 0 24px;
-    font-size: 16px;
+    margin: 0;
+    font-size: 14px;
     font-weight: 600;
     color: #1f2937;
+    text-align: center;
+    margin-bottom: 15px;
   }
 
   .metric-item {

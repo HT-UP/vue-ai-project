@@ -34,7 +34,7 @@ const emit = defineEmits<{
     <div class="nav-right">
       <el-badge :value="unreadCount" :hidden="unreadCount === 0">
         <el-button text @click="emit('go-messages')">
-          <el-icon><Bell /></el-icon>
+          <el-icon :size="20"><Bell /></el-icon>
         </el-button>
       </el-badge>
       <el-dropdown>
